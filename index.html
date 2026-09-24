@@ -11,19 +11,37 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <style>
-  :root {
-    /* โทนสีสำหรับสวนทุเรียน */
-    --bg-main: #f4f7f4;       /* พื้นหลังสีเทาเขียวอ่อนๆ */
+ :root {
+    /* โทนสีสายรุ้งแฟนซี (Rainbow Style) */
+    --bg-main: #f3f0f9;       /* พื้นหลังสีพาสเทลสายรุ้งอ่อนๆ */
     --card-bg: #ffffff;       /* สีพื้นหลังการ์ด */
-    --primary: #2d5a27;       /* สีเขียวใบจันทน์ (เขียวเข้ม) */
-    --accent: #f1c40f;        /* สีเหลืองเนื้อทุเรียน */
+    --primary: #8e44ad;       /* สีม่วงสดใส */
+    --accent: #ff007f;        /* สีชมพูนีออน */
     --text-dark: #2c3e50;
     --text-muted: #7f8c8d;
     
     /* สีสถานะความชื้น */
-    --color-dry: #e74c3c;     /* แดง: แห้งไป (<20%) */
-    --color-normal: #27ae60;  /* เขียว: พอดี (20-70%) */
-    --color-wet: #2980b9;     /* น้ำเงิน: แฉะไป (>70%) */
+    --color-dry: #ff4757;     /* แดงนีออน */
+    --color-normal: #2ed573;  /* เขียวนีออน */
+    --color-wet: #1e90ff;     /* น้ำเงินนีออน */
+  }
+
+  /* เอฟเฟกต์สีสายรุ้งเพิ่มเติมสำหรับพื้นหลังและส่วนหัว */
+  body {
+    background: linear-gradient(135deg, #ffeaa7 0%, #fab1a0 25%, #ff7675 50%, #fd79a8 75%, #a29bfe 100%) !important;
+    background-attachment: fixed !important;
+  }
+
+  .header {
+    background: linear-gradient(45deg, #ff007f, #ff5e00, #eccc68, #2ed573, #1e90ff, #5352ed, #3742fa) !important;
+    background-size: 300% 300% !important;
+    animation: rainbowGlow 6s ease infinite !important;
+  }
+
+  @keyframes rainbowGlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
   }
 
   * { box-sizing: border-box; font-family: 'Prompt', sans-serif; margin: 0; padding: 0; }
